@@ -1,0 +1,21 @@
+.transaction_history {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  background-color: #f0f6f8;
+  line-height: 1.8;
+  font-family: 'Arial', sans-serif;
+  color: #343434;
+  border-collapse: separate;
+}
+
+.head {
+  padding: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 1px solid #ccc;
+}
+
+.row {
+  border: 1px solid #ccc;
+}

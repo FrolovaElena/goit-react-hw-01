@@ -1,0 +1,22 @@
+.pricing_plan {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 150px 60px;
+  width: 1000px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e5edf0;
+}
+
+.bronze {
+  color: #cf7437;
+}
+
+.silver {
+  color: #b4b4b4;
+}
+
+.gold {
+  color: #daa520;
+}
