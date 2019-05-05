@@ -1,4 +1,4 @@
-.transaction_history {
+.transactionHistory {
   width: 500px;
   margin: auto;
   text-align: center;
@@ -16,6 +16,6 @@
   border: 1px solid #ccc;
 }
 
-.row {
+.cell {
   border: 1px solid #ccc;
 }

@@ -2,26 +2,26 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styles from './Profile.module.css';
 
-const Profile = ({ user }) => (
+const Profile = ({ user: { name, tag, avatar, location, stats } }) => (
   <div className={styles.profile}>
     <div className={styles.description}>
-      <img src={user.avatar} width={150} alt="" className={styles.avatar} />
-      <p className={styles.name}>{user.name}</p>
-      <p className={styles.tag}>{`@${user.tag}`}</p>
-      <p className={styles.location}>{user.location}</p>
+      <img src={avatar} width={150} alt="img" className={styles.avatar} />
+      <p className={styles.name}>{name}</p>
+      <p className={styles.tag}>{`@${tag}`}</p>
+      <p className={styles.location}>{location}</p>
     </div>
     <ul className={styles.stats}>
       <li className={styles.stats_item}>
         <span className={styles.label}>Followers</span>
-        <span className={styles.quantity}>{user.stats.followers}</span>
+        <span className={styles.quantity}>{stats.followers}</span>
       </li>
       <li className={styles.stats_item}>
         <span className={styles.label}>Views</span>
-        <span className={styles.quantity}>{user.stats.views}</span>
+        <span className={styles.quantity}>{stats.views}</span>
       </li>
       <li className={styles.stats_item}>
         <span className={styles.label}>Likes</span>
-        <span className={styles.quantity}>{user.stats.likes}</span>
+        <span className={styles.quantity}>{stats.likes}</span>
       </li>
     </ul>
   </div>
@@ -33,7 +33,6 @@ Profile.propTypes = {
     tag: propTypes.string.isRequired,
     location: propTypes.string.isRequired,
     avatar: propTypes.string.isRequired,
-    alt: propTypes.string,
     stats: propTypes.shape({
       followers: propTypes.number.isRequired,
       views: propTypes.number.isRequired,

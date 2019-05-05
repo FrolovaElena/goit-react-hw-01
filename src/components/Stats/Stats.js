@@ -22,7 +22,7 @@ const Stats = ({ title, stats }) => (
           style={{ backgroundColor: getRandColor() }}
         >
           <span>{item.label}</span>
-          <span className={styles.percentage}>{`${item.percentage}%`}</span>
+          <span className={styles.percentage}>{item.percentage}%</span>
         </li>
       ))}
     </ul>
@@ -30,7 +30,7 @@ const Stats = ({ title, stats }) => (
 );
 
 Stats.propTypes = {
-  title: propTypes.string.isRequired,
+  title: propTypes.string,
   stats: propTypes.arrayOf(
     propTypes.shape({
       id: propTypes.string.isRequired,
@@ -38,6 +38,10 @@ Stats.propTypes = {
       percentage: propTypes.number.isRequired,
     }).isRequired,
   ).isRequired,
+};
+
+Stats.defaultProps = {
+  title: '',
 };
 
 export default Stats;
